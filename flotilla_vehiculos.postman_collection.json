@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "b80e26fb-0dd4-4d55-8712-1ec2c391ea1d",
+		"name": "flotilla_vehiculos",
+		"description": "Endpoints para la prueba de una flotilla de vehiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vehicle_endpoints",
+			"item": [
+				{
+					"name": "Delete a vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/vehicle/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"vehicle",
+								"1",
+								""
+							]
+						},
+						"description": "Elimina un vehiculo que tenga una persona"
+					},
+					"response": []
+				},
+				{
+					"name": "List all vehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"vehicle",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"Ibiza\",\n    \"color\": \"Blue\",\n    \"mark\": \"Seat\",\n    \"vehicle_assignment\": false,\n    \"person\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"vehicle",
+								""
+							]
+						},
+						"description": "Agrega un nuevo vechiulo a una persona"
+					},
+					"response": []
+				},
+				{
+					"name": "Update information of vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"M3_Racing\",\n    \"color\": \"Blue\",\n    \"mark\": \"BMW\",\n    \"vehicle_assignment\": false,\n    \"person\": 1\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/vehicle/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"vehicle",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "person_endpoints",
+			"item": [
+				{
+					"name": "List all persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/person/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"person",
+								""
+							]
+						},
+						"description": "Listar todas las personas"
+					},
+					"response": []
+				},
+				{
+					"name": "add new person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Eduardo\",\n    \"last_name\": \"Lopez\",\n    \"email\": \"eduardo@gmail.com\",\n    \"phone_number\": 5565654321\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/person/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"person",
+								""
+							]
+						},
+						"description": "Agregar una nueva persona"
+					},
+					"response": []
+				},
+				{
+					"name": "update person information",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jose Luis\",\n    \"last_name\": \"Martinez Yañez\",\n    \"email\": \"eduardo@gmail.com\",\n    \"phone_number\": 5565654321\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/person/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"person",
+								"1",
+								""
+							]
+						},
+						"description": "Actualizar la informacion de una persona"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a person",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/person/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"person",
+								"1",
+								""
+							]
+						},
+						"description": "eliminar una persona"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assignment_vehicle_endpoints",
+			"item": [
+				{
+					"name": "list_assignment_vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/list_assignmet_vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"list_assignmet_vehicle",
+								""
+							]
+						},
+						"description": "Endpoint that list all vehicles assignments"
+					},
+					"response": []
+				},
+				{
+					"name": "add assignment vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"expiration_date\": \"2021-02-21\",\n    \"vehicle\": 3,\n    \"person\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/fleet_vehicles/api/add_assignmet_vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fleet_vehicles",
+								"api",
+								"add_assignmet_vehicle",
+								""
+							]
+						},
+						"description": "Agregar una nueva asignacion de un vehiculo a una persona"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
